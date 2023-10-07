@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import Home from './pages/Home';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -12,9 +13,10 @@ function App() {
   }
   return (
     <div className="App">
-      <span onClick={()=>setCounter(decrement)}>-</span>
-      <span>{counter}</span>
-      <span onClick={()=>setCounter(icrement)}>+</span>
+      <span onClick={decrement}>-</span>
+      {/* <span>{counter}</span> */}
+      <Home counter={counter}/>
+      <span onClick={icrement}>+</span>
     </div>
   );
 }
